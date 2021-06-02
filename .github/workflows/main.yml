@@ -34,13 +34,16 @@ jobs:
       run: npm install -g bower
       
     - name: Get module Grunt
-      run: npm install grunt
+      run: npm install -g grunt-cli
       
     - name: Get module required for sass (scss)
       run: gem install compass
       
     - name: Set up UI Components/dependencies
       run: bower install
+    
+    - name: Install grunt depedencies
+      run: npm install grunt --save-dev
       
     - name: Show current directory
       run: pwd
@@ -66,5 +69,4 @@ jobs:
         git branch -m autobuildmaster
         git add .
         git commit -m "release changes to Bahmni apps production code"
-        git remote add github https://${{ secrets.BAHMNI_APPS_092 }}@github.com/eRegister/bahmniapps092dev.git
         git push -f github autobuildmaster 
