@@ -34,13 +34,19 @@ jobs:
       run: npm install -g bower
       
     - name: Get module Grunt
-      run: npm install -g grunt
+      run: npm install -g grunt-cli
       
     - name: Get module required for sass (scss)
       run: gem install compass
       
+    - name: Install Node dependencies 
+      run: npm install
+      
+    - name: Set up UI Components/dependencies
+      run: bower install
+      
     - name: Build the application (into dist folder) using Grunt
-      run: grunt --force
+      run: grunt
       
     - name: List output files
       run: ls
