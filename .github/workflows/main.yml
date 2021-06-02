@@ -34,7 +34,7 @@ jobs:
       run: npm install -g bower
       
     - name: Get module Grunt
-      run: npm install -g grunt-cli
+      run: npm install grunt --save-dev
       
     - name: Get module required for sass (scss)
       run: gem install compass
