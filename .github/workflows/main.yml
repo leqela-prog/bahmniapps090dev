@@ -5,7 +5,7 @@ name: Autobuild CI
 
 on:
   push:
-    branches: [ release-0.92 ]
+    branches: [main]
 
 defaults:
   run:
