@@ -1,36 +1,68 @@
-# This is a basic workflow to help you get started with Actions
+# This workflow will do a clean install of bahmniapps dependencies, node dependencies, and build the bahmniapps source code
+# This workflow will be triggered only when there's a push to the release-0.92 branch of the repo
+# i.e. when a pull request is merged or when a commit is made directly to the master branch
+name: Autobuild CI
 
-name: CI
-
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [ release-0.92 ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+defaults:
+  run:
+    working-directory: ui
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
+
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x
+        
+    - name: Use ruby 2.7
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.7'
+   
+    - name: Get module Bower
+      run: npm install -g bower
+      
+    - name: Get module Grunt
+      run: npm install -g grunt
+      
+    - name: Get module required for sass (scss)
+      run: gem install compass
+      
+    - name: Get node dependencies
+      run: npm install
+      
+    - name: Set up UI component/dependencies
+      run: bower install
+      
+    - name: Build the application (into dist folder) using Grunt
+      run: grunt --force
+      
+    - name: List output files
+      run: ls
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+    - name: List dist files
+      run: cd dist && ls
+      
+    - name: Where am I
+      run: pwd
+     
+    - name: Push production code to release repo
+      run: |
+        cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+        git config --global user.email "seeisoleqelat@gmail.com"
+        git config --global user.name "leqela-prog"
+        git init
+        git branch -m autobuildmaster
+        git add .
+        git commit -m "release changes to Bahmni apps production code"
+        git remote add github https://${{ secrets.BAHMNI_APPS_092 }}@github.com/eRegister/bahmniapps092dev.git
+        git push -f github autobuildmaster 
