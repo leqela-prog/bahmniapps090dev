@@ -6,6 +6,8 @@ name: Autobuild CI
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 defaults:
   run:
@@ -36,12 +38,6 @@ jobs:
       
     - name: Get module required for sass (scss)
       run: gem install compass
-      
-    - name: Get node dependencies
-      run: npm install
-      
-    - name: Set up UI component/dependencies
-      run: bower install
       
     - name: Build the application (into dist folder) using Grunt
       run: grunt --force
