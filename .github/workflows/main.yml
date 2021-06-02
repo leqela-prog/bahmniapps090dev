@@ -39,11 +39,11 @@ jobs:
     - name: Get module required for sass (scss)
       run: gem install compass
       
-    - name: Install Node dependencies 
-      run: npm install
-      
     - name: Set up UI Components/dependencies
       run: bower install
+      
+    - name: Show current directory
+      run: pwd
       
     - name: Build the application (into dist folder) using Grunt
       run: grunt
