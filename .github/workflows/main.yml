@@ -46,7 +46,7 @@ jobs:
       run: pwd
       
     - name: Build the application (into dist folder) using Grunt
-      run: grunt
+      run: cd ui && grunt
       
     - name: List output files
       run: ls
