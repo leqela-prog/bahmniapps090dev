@@ -41,10 +41,10 @@ jobs:
       
     - name: Set up UI Components/dependencies
       run: bower install
-    
-    - name: Install grunt depedencies
-      run: npm install grunt --save-dev
       
+    - name: Install project dependeciens
+      run: sudo npm install
+    
     - name: Show current directory
       run: pwd
       
