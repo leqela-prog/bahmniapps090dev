@@ -20,15 +20,18 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Use Node.js 10.x
+    - name: Use Node.js 8.x
       uses: actions/setup-node@v1
       with:
-        node-version: v10.11.0
-        
-    - name: Use ruby 2.7
+        node-version: v8.9.4
+
+    - name: Use ruby 2.5
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: '2.7'
+        ruby-version: '2.5'
+        
+    - name: Install project dependeciens
+      run: sudo npm install
    
     - name: Get module Bower
       run: npm install -g bower
@@ -42,18 +45,12 @@ jobs:
     - name: Set up UI Components/dependencies
       run: bower install
       
-    - name: Install project dependeciens
-      run: sudo npm install
-    
     - name: Show current directory
       run: pwd
       
     - name: Build the application (into dist folder) using Grunt
-      run: grunt clean test
+      run: grunt --force
       
-    - name: List output files
-      run: ls
-
     - name: List dist files
       run: cd dist && ls
       
