@@ -15,7 +15,8 @@ defaults:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: Ubuntu 18.04.5 LTS
+
 
     steps:
     - uses: actions/checkout@v2
@@ -28,7 +29,7 @@ jobs:
     - name: Use ruby 2.5
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: '2.5'
+        ruby-version: '2.5.1p57'
         
     - name: Install project dependeciens
       run: sudo npm install
