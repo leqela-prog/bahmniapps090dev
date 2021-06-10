@@ -30,7 +30,10 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: '2.5'
-        
+    
+    - name : Get the node version
+      run: node --version
+    
     - name: Install project dependeciens
       run: sudo npm install
    
