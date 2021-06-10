@@ -29,7 +29,7 @@ jobs:
     - name: Use ruby 2.5
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: '2.5.1p57'
+        ruby-version: '2.5'
         
     - name: Install project dependeciens
       run: sudo npm install
