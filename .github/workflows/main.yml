@@ -66,8 +66,7 @@ jobs:
         cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
         git config --global user.email "seeisoleqelat@gmail.com"
         git config --global user.name "leqela-prog"
-        git init
-        git branch -m autobuildmaster
+        git config --global init.defaultBranch bahmniapps_auto_build
         git add .
         git commit -m "release changes to Bahmni apps production code"
-        git push --set-upstream autobuildmaster autobuildmaster
+        git push --set-upstream bahmniapps_auto_build bahmniapps_augto_build
