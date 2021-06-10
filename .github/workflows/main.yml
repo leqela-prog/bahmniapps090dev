@@ -34,8 +34,8 @@ jobs:
     - name : Get the node version
       run: node --version
     
-    - name: Install project dependeciens
-      run: sudo npm install
+    - name: Install Yarn module
+      run: yarn install --ignore-engines
    
     - name: Get module Bower
       run: npm install -g bower
