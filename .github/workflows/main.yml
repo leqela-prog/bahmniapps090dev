@@ -70,4 +70,4 @@ jobs:
         git branch -m autobuildmaster
         git add .
         git commit -m "release changes to Bahmni apps production code"
-        git push autobuildmaster 
+        git push --set-upstream autobuildmaster autobuildmaster
