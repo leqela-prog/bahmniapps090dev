@@ -70,4 +70,4 @@ jobs:
         git config advice.addIgnoredFile false
         git add -v -f .
         git commit -m "release changes to Bahmni apps production code"
-        git push --set-upstream bahmniapps_auto_build bahmniapps_augto_build
+        git push --set-upstream bahmniapps_auto_build bahmniapps_auto_build --force
