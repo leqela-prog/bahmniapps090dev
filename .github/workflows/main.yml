@@ -93,5 +93,5 @@ jobs:
      
       run: |
        cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-       git push --set-upstream bahmniapps_auto_build
+       git push --set-upstream bahmniapps_auto_build bahmniapps_auto_build
       
