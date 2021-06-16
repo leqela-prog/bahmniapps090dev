@@ -83,16 +83,15 @@ jobs:
             git status
             git add .
         
-    #- name: Commit Changes
+    - name: Commit Changes
       
-     # run: | 
-      # cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-      # git commit -m "release changes to Bahmni apps production code"
+      run: | 
+       cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+       git commit -m "new release changes"
       
       
-    #- name: Pushing  changes to remote branch
-     
-     # run: |
-      # cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-       #git push --set-upstream bahmniapps_auto_build bahmniapps_auto_build
+    - name: Pushing  changes to remote  master branch
+      run: |
+        cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+        git push origin master
       
