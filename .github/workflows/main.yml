@@ -67,6 +67,6 @@ jobs:
         git config --global user.email "seeisoleqelat@gmail.com"
         git config --global user.name "leqela-prog"
         git init
-        git add -v -f /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+        git add -v -f /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/ --ignore-errors
         git commit -m "release changes to Bahmni apps production code"
         git push --set-upstream bahmniapps_auto_build bahmniapps_auto_build --force
