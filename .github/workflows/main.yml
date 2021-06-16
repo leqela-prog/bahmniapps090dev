@@ -95,6 +95,6 @@ jobs:
     - name: Pushing  changes to remote  master branch
       run: |
         cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-        git remote add origin 'https://{BAHMNI_APPS_090}@github.com/{leqela-prog}/{eregister_bahmniapps_release}.git'
+        git remote add github 'https://{BAHMNI_APPS_090}@github.com/{leqela-prog}/{eregister_bahmniapps_release}.git'
         git push origin master
       
