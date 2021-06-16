@@ -78,7 +78,7 @@ jobs:
     - name: Adding file to staging area
       run:
         git branch
-        git add -v -f /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/ --ignore-errors
+        git add -v -f /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
     #- name: Commit Changes
      # run: git commit -m "release changes to Bahmni apps production code"
       
