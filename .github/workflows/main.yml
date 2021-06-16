@@ -61,37 +61,36 @@ jobs:
     - name: Where am I
       run: pwd
      
-    - name: Push production code to release repo
+    - name: Initialize git local repository and linking it with remote repository
       run: |
         cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-        git config --global user.email "seeisoleqelat@gmail.com"
-        git config --global user.name "leqela-prog"
-        git init
-        git branch -m bahmniapps_auto_build
-      
-    - name: Check the current branch and checkout to bahmniapps_auto_build
-      run: | 
-           cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-           git branch
-           git checkout -b bahmniapps_auto_build
-           git branch
-      
-    - name: Adding file to staging area
-      run: |
-        cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-        git branch
-        git add .
         
-    - name: Commit Changes
+        git init
+        git remote add origin https://github.com/leqela-prog/eregister_bahmniapps_release.git
       
-      run: | 
-       cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-       git commit -m "release changes to Bahmni apps production code"
+   # - name: Check the current branch and checkout to bahmniapps_auto_build
+    #  run: | 
+       #    cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+           #git branch
+           #git checkout -b bahmniapps_auto_build
+          # git branch
+      
+   # - name: Adding file to staging area
+     # run: |
+        #cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+        #git branch
+       # git add .
+        
+    #- name: Commit Changes
+      
+     # run: | 
+      # cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+      # git commit -m "release changes to Bahmni apps production code"
       
       
-    - name: Pushing  changes to remote branch
+    #- name: Pushing  changes to remote branch
      
-      run: |
-       cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-       git push --set-upstream bahmniapps_auto_build bahmniapps_auto_build
+     # run: |
+      # cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+       #git push --set-upstream bahmniapps_auto_build bahmniapps_auto_build
       
