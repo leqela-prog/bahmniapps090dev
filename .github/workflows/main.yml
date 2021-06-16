@@ -72,7 +72,7 @@ jobs:
     - name: Check the current branch and checkout to bahmniapps_auto_build
       run: | 
            cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-           git branch
+           pwd
            
       
       
@@ -80,7 +80,7 @@ jobs:
       run: |
             cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
             git branch
-            Git status
+            git status
             git add .
         
     #- name: Commit Changes
