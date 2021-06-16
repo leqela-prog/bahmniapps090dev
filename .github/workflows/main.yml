@@ -66,7 +66,7 @@ jobs:
         cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
         
         git init
-        git remote add origin https://github.com/leqela-prog/eregister_bahmniapps_release.git
+        git remote add origin 'https://{BAHMNI_APPS_090}@github.com/{leqela-prog}/{eregister_bahmniapps_release}.git'
         
       
     - name: Check the current branch and checkout to bahmniapps_auto_build
@@ -95,6 +95,5 @@ jobs:
     - name: Pushing  changes to remote  master branch
       run: |
         cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-        git config remote.origin.url 'https://{BAHMNI_APPS_090}@github.com/{leqela-prog}/{eregister_bahmniapps_release}.git'
         git push origin master
       
