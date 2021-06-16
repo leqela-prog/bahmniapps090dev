@@ -67,6 +67,7 @@ jobs:
         
         git init
         git remote add origin https://github.com/leqela-prog/eregister_bahmniapps_release.git
+        git branch
       
    # - name: Check the current branch and checkout to bahmniapps_auto_build
     #  run: | 
