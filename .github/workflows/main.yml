@@ -83,5 +83,5 @@ jobs:
     - name: Commit Changes
       run: git commit -m "release changes to Bahmni apps production code"
       
-    #- name: Pushing  changes to remote branch
-     # run: git push --set-upstream bahmniapps_auto_build bahmniapps_auto_build --force
+    - name: Pushing  changes to remote branch
+      run: git push --set-upstream bahmniapps_auto_build bahmniapps_auto_build --force
