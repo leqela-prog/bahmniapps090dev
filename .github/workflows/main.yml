@@ -71,17 +71,27 @@ jobs:
       
     - name: Check the current branch and checkout to bahmniapps_auto_build
       run: | 
+           cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
            git branch
            git checkout -b bahmniapps_auto_build
            git branch
       
     - name: Adding file to staging area
       run: |
+        cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
         git branch
         git add .
         
     - name: Commit Changes
-      run: git commit -m "release changes to Bahmni apps production code"
+      
+      run: | 
+       cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+       git commit -m "release changes to Bahmni apps production code"
+      
       
     - name: Pushing  changes to remote branch
-      run: git push --set-upstream bahmniapps_auto_build
+     
+      run: |
+       cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+       git push --set-upstream bahmniapps_auto_build
+      
