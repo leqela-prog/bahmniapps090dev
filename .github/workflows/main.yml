@@ -68,12 +68,15 @@ jobs:
         git config --global user.name "leqela-prog"
         git init
         git branch -m bahmniapps_auto_build
-        
-    - name: Adding file to staging area
-      run: 
-        git add -v -f /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/ --ignore-errors
-    - name: Commit Changes
-      run: git commit -m "release changes to Bahmni apps production code"
       
-    - name: Pushing  changes to remote branch
-      run: git push --set-upstream bahmniapps_auto_build bahmniapps_auto_build --force
+    - name: Check the current branch
+      run: git branch
+      
+    #- name: Adding file to staging area
+     # run: 
+      #  git add -v -f /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/ --ignore-errors
+    #- name: Commit Changes
+     # run: git commit -m "release changes to Bahmni apps production code"
+      
+    #- name: Pushing  changes to remote branch
+     # run: git push --set-upstream bahmniapps_auto_build bahmniapps_auto_build --force
