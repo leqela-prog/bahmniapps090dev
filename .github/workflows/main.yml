@@ -98,5 +98,5 @@ jobs:
       run: |
         cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
         git remote add bahmniapps_artifacts git@github.com/leqela-prog/bahmniapps090dev.git
-        git push -f origin bahmniapps_artifacts
+        git push -f --Sset-upstream bahmniapps_artifacts bahmniapps_artifacts
       
