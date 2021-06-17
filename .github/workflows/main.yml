@@ -108,6 +108,8 @@ jobs:
     - name : Reseting the origin bahmniapps_artifacts
       run: | 
           cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+          git config --global --unset http.prox
+          git config --global --unset https.prox
           git fetch --all
           git pull origin main
         
