@@ -95,5 +95,5 @@ jobs:
     - name: Pushing  changes to remote  master branch
       run: |
         cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-        git push origin master
+        git push -f origin master
       
