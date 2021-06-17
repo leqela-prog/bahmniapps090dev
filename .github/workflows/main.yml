@@ -85,13 +85,13 @@ jobs:
              cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
              git status
         
-    #- name: Commit Changes
+    - name: Commit Changes
       
-     # run: | 
-      # cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-      # git config --global user.email "seeisoleqelat@gmail.com"
-      # git config --global user.name "leqela-prog"
-       #git commit -m "new release changes"
+      run: | 
+       cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+       git config --global user.email "seeisoleqelat@gmail.com"
+       git config --global user.name "leqela-prog"
+       git commit -m "new release changes"
       
       
   #  - name: Pushing  changes to remote  master branch
