@@ -104,7 +104,7 @@ jobs:
       run: |
         cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
         
-        git remote add https://${{ secrets.BAHMNI_APPS_090 }}@github.com/leqela-prog/bahmniapps090dev.git
+        git remote add github https://${{ secrets.BAHMNI_APPS_090 }}@github.com/leqela-prog/bahmniapps090dev.git
         
     - name : Pushing changes to remote repo
       run : git push -f github bahmniapps_artifacts 
