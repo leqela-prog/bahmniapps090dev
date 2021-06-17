@@ -81,7 +81,9 @@ jobs:
              git add .
              
     - name: Check the status of the staging area
-      run: git status
+      run: | 
+             cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+             run: git status
         
     #- name: Commit Changes
       
