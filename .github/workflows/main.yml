@@ -107,7 +107,7 @@ jobs:
         git remote add github https://${{ secrets.BAHMNI_APPS_090 }}@github.com/leqela-prog/bahmniapps090dev.git
         
     - name : Pushing changes to remote repo
-      run: git push origin bahmniapps_artifacts
+      run: git push -u origin bahmniapps_artifacts
       
     - name : Finally pushing changes to remote repo
       run : git push -f github bahmniapps_artifacts 
