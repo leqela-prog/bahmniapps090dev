@@ -77,12 +77,10 @@ jobs:
            
       
       
-   # - name: Adding file to staging area
-     # run: |
-           # cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-           # git branch
-           # git status
-           # git add .
+    - name: Adding file to staging area
+      run: |
+             cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+             git add .
         
     #- name: Commit Changes
       
