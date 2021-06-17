@@ -94,11 +94,11 @@ jobs:
        git config --global user.password "Stle8719#"
        git commit -m "new release changes"
        
-    - name: Linking local repo with remote
+   # - name: Linking local repo with remote
       
-      run: |
-        cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-        git remote add origin https://github.com/leqela-prog/eregister_bahmniapps_release.git
+    #  run: |
+     #   cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+      #  git remote add origin https://github.com/leqela-prog/eregister_bahmniapps_release.git
         
    # - name : Pushing changes to remote repo
       #run: git push -u origin bahmniapps_artifacts
@@ -106,8 +106,6 @@ jobs:
     - name : Finally pushing changes to remote repo
       run : |
        cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-       git config --global user.email "seeisoleqelat@gmail.com"
-       git config --global user.name "leqela-prog"
-       git config --global user.password "Stle8719#"
+       git remote add origin https://{leqela-prog}:{Stle8719#}@github.com/{leqela-prog}/eregister_bahmniapps_release.git
        git push origin bahmniapps_artifacts
       
