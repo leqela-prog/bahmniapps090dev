@@ -103,9 +103,13 @@ jobs:
    # - name : Pushing changes to remote repo
       #run: git push -u origin bahmniapps_artifacts
       
-    - name : Finally pushing changes to remote repo
+    - name : prividing authentication to remote repo
       run : |
        cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
        git remote add origin https://{leqela-prog}:{Stle8719#}@github.com/{leqela-prog}/eregister_bahmniapps_release.git
-       git push origin bahmniapps_artifacts
+       
+    - name : Pushing changes
+      run : |
+        cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+        git push origin bahmniapps_artifacts
       
