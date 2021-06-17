@@ -66,15 +66,14 @@ jobs:
         cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
         
         git init
-        git branch
         git branch -m bahmniapps_artifacts
-        git branch
+      
         
       
-   # - name: Check the current branch and checkout to bahmniapps_auto_build
-     # run: | 
-          # cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-           #pwd
+    - name: Check the current branch
+      run: | 
+          cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+           git branch
            
       
       
