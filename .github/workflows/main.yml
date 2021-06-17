@@ -94,7 +94,10 @@ jobs:
        git commit -m "new release changes"
        
     - name: Linking local repo with remote
-      run: git remote add origin https://github.com/leqela-prog/bahmniapps090dev.git
+      
+      run: |
+        cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+        git remote add origin https://github.com/leqela-prog/bahmniapps090dev.git
       
       
     #- name: Pushing  changes to remote  master branch
