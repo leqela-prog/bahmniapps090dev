@@ -75,12 +75,13 @@ jobs:
           cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
            git status
            
-      
-      
     - name: Adding file to staging area
       run: |
              cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
              git add .
+             
+    - name: Check the status of the staging area
+      run: git status
         
     #- name: Commit Changes
       
