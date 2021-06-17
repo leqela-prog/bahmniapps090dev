@@ -61,39 +61,41 @@ jobs:
     - name: Where am I
       run: pwd
      
-    - name: Initialize git local repository and linking it with remote repository
+    - name: Initialize git local repository and renaming the branch
       run: |
         cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
         
         git init
-        git remote add origin 'https://{BAHMNI_APPS_090}@github.com/{leqela-prog}/{eregister_bahmniapps_release}.git'
+        git branch
+        git branch -m bahmniapps_artifacts
+        git branch
         
       
-    - name: Check the current branch and checkout to bahmniapps_auto_build
-      run: | 
-           cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-           pwd
+   # - name: Check the current branch and checkout to bahmniapps_auto_build
+     # run: | 
+          # cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+           #pwd
            
       
       
-    - name: Adding file to staging area
-      run: |
-            cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-            git branch
-            git status
-            git add .
+   # - name: Adding file to staging area
+     # run: |
+           # cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+           # git branch
+           # git status
+           # git add .
         
-    - name: Commit Changes
+    #- name: Commit Changes
       
-      run: | 
-       cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-       git config --global user.email "seeisoleqelat@gmail.com"
-       git config --global user.name "leqela-prog"
-       git commit -m "new release changes"
+     # run: | 
+      # cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+      # git config --global user.email "seeisoleqelat@gmail.com"
+      # git config --global user.name "leqela-prog"
+       #git commit -m "new release changes"
       
       
-    - name: Pushing  changes to remote  master branch
-      run: |
-        cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
-        git push -f origin master
+  #  - name: Pushing  changes to remote  master branch
+     # run: |
+        #cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
+        #git push -f origin master
       
