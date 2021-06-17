@@ -105,6 +105,7 @@ jobs:
       
     - name : Finally pushing changes to remote repo
       run : |
+       cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
        git config --global user.email "seeisoleqelat@gmail.com"
        git config --global user.name "leqela-prog"
        git config --global user.password "Stle8719#"
