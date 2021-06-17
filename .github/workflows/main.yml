@@ -100,10 +100,12 @@ jobs:
         git remote add origin https://github.com/leqela-prog/bahmniapps090dev.git
       
       
-    - name: Pushing  changes to remote  master branch
+    - name: authenticating remote git repository
       run: |
         cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
         
         git remote add https://${{ secrets.BAHMNI_APPS_090 }}@github.com/leqela-prog/bahmniapps090dev.git
-        git push -f github bahmniapps_artifacts 
+        
+    - name : Pushing changes to remote repo
+      run : git push -f github bahmniapps_artifacts 
       
