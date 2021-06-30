@@ -94,7 +94,7 @@ jobs:
        git config --global user.password "Stle8719#"
        git commit -m "new release changes"
        
-   # - name: Linking local repo with remote
+   
       
     #  run: |
      #   cd /home/runner/work/bahmniapps090dev/bahmniapps090dev/ui/dist/
